@@ -26,6 +26,10 @@ app.use(express.static('public'));
 // ROUTES
 // ============================
 // INDEX
+app.get('/', (req, res) => {
+    res.redirect('/outfits');
+});
+
 app.get('/outfits', (req, res) => {
     Outfits.find({}, (err, allOutfits) => {
         console.log(allOutfits);
@@ -40,31 +44,31 @@ app.get('/outfits/new', (req, res) => {
 });
 
 // CREATE - POST
-// app.get('/seed', async (req, res) => {
-//   const newOutfit =
-//     [
-//       {
-//           day: 1,
-//           topImg: "https://img.shein.com/images/shein.com/201705/dc/14944649914741410769_thumbnail_600x799.jpg",
-//           bottomImg: "https://img.ltwebstatic.com/images2_pi/2019/07/05/15623121093830758888_thumbnail_600x799.jpg",
-//           shoesImg: "https://img.ltwebstatic.com/images2_pi/2019/05/16/15579792442268560421_thumbnail_600x799.jpg",
-//           accessoriesImg: "https://ii.francescas.com/fcgi-bin/iipsrv.fcgi?FIF=/images/francescascollections//source/Jewelry_Accessories/SSN8331_gold-cl.tif&wid=2000&cvt=jpeg",
-//       }, {
-//           day: 2,
-//           topImg: "https://img.ltwebstatic.com/images2_pi/2019/06/24/1561358691763538460_thumbnail_600x799.jpg",
-//           bottomImg: "https://img.ltwebstatic.com/images2_pi/2019/04/19/15556673262235800546_thumbnail_600x799.jpg",
-//           shoesImg: "https://img.ltwebstatic.com/images2_pi/2018/10/17/15397636442215170302_thumbnail_600x799.jpg",
-//           accessoriesImg: "https://img.ltwebstatic.com/images2_pi/2019/05/01/15566754981633022780_thumbnail_600x799.jpg",
-//       }
-//   ];
-//
-//   try {
-//     const seedItems = await Outfits.create(newOutfit);
-//     res.send(seedItems);
-//   } catch (err) {
-//     res.send(err.message);
-// }
-// });
+app.get('/seed', async (req, res) => {
+  const newOutfit =
+    [
+      {
+          day: 1,
+          topImg: "https://img.shein.com/images/shein.com/201705/dc/14944649914741410769_thumbnail_600x799.jpg",
+          bottomImg: "https://img.ltwebstatic.com/images2_pi/2019/07/05/15623121093830758888_thumbnail_600x799.jpg",
+          shoesImg: "https://img.ltwebstatic.com/images2_pi/2019/05/16/15579792442268560421_thumbnail_600x799.jpg",
+          accessoriesImg: "https://ii.francescas.com/fcgi-bin/iipsrv.fcgi?FIF=/images/francescascollections//source/Jewelry_Accessories/SSN8331_gold-cl.tif&wid=2000&cvt=jpeg",
+      }, {
+          day: 2,
+          topImg: "https://img.ltwebstatic.com/images2_pi/2019/06/24/1561358691763538460_thumbnail_600x799.jpg",
+          bottomImg: "https://img.ltwebstatic.com/images2_pi/2019/04/19/15556673262235800546_thumbnail_600x799.jpg",
+          shoesImg: "https://img.ltwebstatic.com/images2_pi/2018/10/17/15397636442215170302_thumbnail_600x799.jpg",
+          accessoriesImg: "https://img.ltwebstatic.com/images2_pi/2019/05/01/15566754981633022780_thumbnail_600x799.jpg",
+      }
+  ];
+
+  try {
+    const seedItems = await Outfits.create(newOutfit);
+    res.send(seedItems);
+  } catch (err) {
+    res.send(err.message);
+}
+});
 // DELETE
 app.delete('/shop/:id', (req, res) => {
     Clothes.findByIdAndRemove(req.params.id, (err, data) => {
