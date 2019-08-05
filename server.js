@@ -6,11 +6,14 @@ const mongoose = require('mongoose');
 const app = express();
 const Outfits = require('./models/outfits.js');
 const methodOverride = require('method-override');
+require('dotenv').config();
 // ============================
 //  CONFIGURATION
 // ============================
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
+const PORT = process.env.PORT
+const mongoURI = process.env.MONGODB_URI
 // ============================
 // DATABASE
 // ============================
@@ -108,11 +111,11 @@ app.post('/outfits', (req, res) => {
 // ============================
 // LISTENER
 // ============================
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('listening');
 });
 
-mongoose.connect('mongodb://localhost:27017/outfits', {
+mongoose.connect(mongoURI, {
     useNewUrlParser: true});
 
 mongoose.connection.once('open', () => {
