@@ -70,7 +70,7 @@
 
 .buttons > a:hover {
     color: black;
-    
+
 }
 
 .container {
@@ -87,7 +87,8 @@
     align-items: center;
     background-color: #f5ebe6;
     margin: 2vw;
-    height: 75px;
+    height: 10vw;
+    min-height: 100px;
 }
 
 .createButton > a {
