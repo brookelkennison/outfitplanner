@@ -3,20 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>Show Page</title>
+        <link rel="stylesheet" href="https://use.typekit.net/zpe1aid.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/show.css">
+        <meta name="viewport" content="width=device-width, initial-scale=.50">
     </head>
     <body>
-        <div class="container">
+        <div class="header">
         <h1>Outfit Day <%=outfits.day%></h1>
         <a href="/outfits/">
             go back
         </a>
+        </div>
+        <div class="container">
             <img src="<%=outfits.topImg%>" alt="top"/>
             <img src="<%=outfits.bottomImg%>" alt="bottom"/>
             <img src="<%=outfits.shoesImg%>" alt="shoes"/>
             <img src="<%=outfits.accessoriesImg%>" alt="accessories"/>
         </div>
+        <div class="footer">
             <form action="/outfits/<%=outfits.id%>/?_method=DELETE" method="POST">
                 <input type="submit" name="" value="DELETE">
             </form>
+        </div>
     </body>
 </html>
