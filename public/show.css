@@ -45,14 +45,14 @@
 }
 
 .container > img {
-    width: 30vw;
-    height: 36vw;
+    width: 22vw;
+    height: 30vw;
     margin: 1vw;
     border: 4px #f5ebe6 solid;
     min-width: 190px;
     min-height: 250px;
-    max-width: 230px;
-    max-height: 310px;
+    max-width: 320px;
+    max-height: 400px;
 }
 
 .footer {
