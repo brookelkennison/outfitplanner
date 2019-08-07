@@ -49,10 +49,10 @@
     height: 30vw;
     margin: 1vw;
     border: 4px #f5ebe6 solid;
-    min-width: 190px;
-    min-height: 250px;
-    max-width: 310px;
-    max-height: 400px;
+    min-width: 240px;
+    min-height: 300px;
+    max-width: 300px;
+    max-height: 360px;
 }
 
 .footer {
