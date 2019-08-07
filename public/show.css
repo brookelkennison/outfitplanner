@@ -1,5 +1,5 @@
 .header {
-    background-color: #f5ebe6;
+    background-color: #edd9d8;
     margin: 2vw;
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
     margin: 0 3vw 3vw 0;
     padding: 4px;
     border: 3px white solid;
-    background-color: #f5ebe6;
+    background-color: #edd9d8;
     color: grey;
     text-decoration: none;
     font-size: 5vw;
@@ -48,7 +48,7 @@
     width: 23vw;
     height: 29vw;
     margin: 1vw;
-    border: 4px #f5ebe6 solid;
+    border: 4px #edd9d8 solid;
     min-width: 240px;
     min-height: 300px;
     max-width: 340px;
@@ -59,7 +59,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f5ebe6;
+    background-color: #edd9d8;
     margin: 2vw;
     height: 10vw;
     min-height: 100px;
@@ -72,7 +72,7 @@
     font-size: 28px;
     text-decoration: none;
     color: grey;
-    background-color: #f5ebe6;
+    background-color: #edd9d8;
     border: 4px solid white;
     padding: 1vw;
 }
