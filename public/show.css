@@ -46,12 +46,12 @@
 
 .container > img {
     width: 23vw;
-    height: 30vw;
+    height: 29vw;
     margin: 1vw;
     border: 4px #f5ebe6 solid;
     min-width: 240px;
     min-height: 300px;
-    max-width: 350px;
+    max-width: 340px;
     max-height: 410px;
 }
 
