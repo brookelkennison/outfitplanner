@@ -3,25 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>Index Page</title>
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="https://use.typekit.net/zpe1aid.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/index.css">
         <meta name="viewport" content="width=device-width, initial-scale=.50">
     </head>
     <body>
-            <h6>INDEX</h6>
-            <h1>Outfit Planner</h1>
+        <!-- HEADER -->
+        <div class="header">
+            <h1>outfit planner</h1>
+            <h3>simplify your days</h3>
+        </div>
+        <!-- CONTAINER -->
+        <div class="container">
             <%for (let i = 0; i < outfits.length; i++) { %>
-            <h2>Outfit Day <%= outfits[i].day %> </h2>
+            <div class="days">
+            <h2>day <%= outfits[i].day %> </h2>
+        <!-- BUTTONS -->
         <div class="buttons">
             <a href="/outfits/<%=outfits[i].id%>"> VIEW
             </a>
             <a href="/outfits/<%=outfits[i].id%>/edit">EDIT</a>
         </div>
+            </div>
             <% } %>
-
-
+        </div>
+        <!-- FOOTER -->
         <div class="createButton">
             <a href="/outfits/new">
-                CREATE PRODUCT
+                create new outfit
             </a>
         </div>
     </body>
