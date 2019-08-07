@@ -1,0 +1,78 @@
+.header {
+    background-color: #edd9d8;
+    margin: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > h1 {
+    font-family: aileron, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 10vw;
+    text-align: center;
+    margin: 2vw;
+    line-height: 12vw;
+    text-shadow: -2px -2px white;
+    text-transform: lowercase;
+}
+.header > a {
+    font-family: 'Cuprum', sans-serif;
+    margin: 0 3vw 3vw 0;
+    padding: 4px;
+    border: 3px white solid;
+    background-color: #edd9d8;
+    color: grey;
+    text-decoration: none;
+    font-size: 5vw;
+    text-transform: uppercase;
+}
+
+.header > a:hover {
+    background-color: white;
+}
+
+.container {
+    margin: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px grey solid;
+    padding: 1vw;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 30px;
+}
+
+.container > form > input{
+    border: black 2px solid;
+    height: 32px;
+    width: 250px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+.footer > input {
+    background-color: white;
+    border: 3px solid #edd9d8;
+    font-family: aileron, sans-serif;
+    width: 250px;
+    font-size: 24px;
+    text-transform: lowercase;
+    padding: 10px;
+    margin: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer > input:hover {
+    background-color: #edd9d8;
+}

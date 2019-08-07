@@ -3,9 +3,20 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <link rel="stylesheet" href="https://use.typekit.net/zpe1aid.css">
+        <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Cuprum&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/edit.css">
+        <meta name="viewport" content="width=device-width, initial-scale=.50">
     </head>
     <body>
+        <div class="header">
         <h1>Edit Outfit Day <%=outfits.day%></h1>
+        <a href="/outfits/">
+            go back
+        </a>
+        </div>
+        <div class="container">
         <form action="/outfits/<%=outfits.id%>?_method=PUT" method="POST">
             Outfit Day: <input type="text" name="day" value="<%=outfits.day%>" /><br/>
             Top Image Link: <input type="text" name="topImg" value="<%outfits.topImg%>" /><br/>
@@ -13,10 +24,11 @@
             Shoes Image Link: <input type="text" name="shoesImg" value="<%outfits.shoesImg%>" /><br/>
             Accessories Image Link: <input type="text" name="accessoriesImg" value="<%outfits.accessoriesImg%>"  /><br/>
             <br/>
+            <div class="footer">
             <input type="submit" name="" value="Submit Changes"/>
+        </div>
         </form>
-        <a href="/outfits/">
-            go back
-        </a>
+    </div>
+
     </body>
 </html>
