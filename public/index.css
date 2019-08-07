@@ -48,7 +48,7 @@
 
 .days > h2 {
     font-family: aileron, sans-serif;
-    font-size: 50px;
+    font-size: 80px;
     margin: 5px;
 }
 
@@ -59,13 +59,13 @@
 
 .buttons > a {
     font-family: 'Cuprum', sans-serif;
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 4px;
     border: 3px #f5ebe6 solid;
     background-color: white;
     color: grey;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 38px;
 }
 
 .buttons > a:hover {
